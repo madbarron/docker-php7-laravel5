@@ -1,18 +1,18 @@
 Laravel 5 Environment
 =====================
 
-> Image to run Laravel 5 apps under Apache 2 and PHP 5.6
+> Image to run Laravel 5 apps under Apache 2 and PHP 7.0
 
 How to build
 ------------
 
-`docker build -t laravel5 .`
+`docker build -t apache-php7-laravel5 .`
 
 How to run
 ----------
 
 ```
-docker run -itP -v ~/<project path>:/var/www/laravel laravel5 /bin/bash
+docker run -itP -v ~/<project path>:/var/www/laravel apache-php7-laravel5 /bin/bash
 apache2
 ```
 
@@ -26,3 +26,8 @@ To set up a new project directory
 
 To install a new laravel instance onto your file system folder, mount a volume and then run:
 `composer.phar create-project laravel/laravel /var/www/laravel --prefer-dist`
+
+To test database connection in container
+----------------------------------------
+
+# tsql -H <hostname> -U <username> -P <password> -D <database name>

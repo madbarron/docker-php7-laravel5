@@ -34,6 +34,4 @@ COPY freetds/locales.conf /etc/freetds/
 
 Expose 80 443
 
-# tsql -H Ulysses -U artisan -P C0d3-beautifu11y -D Hub
-
 CMD ["apache2", "-DFOREGROUND"]
