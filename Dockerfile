@@ -25,12 +25,12 @@ RUN apt-get update && apt-get install -y \
  && cd /usr/src/php \
  && make clean
 
-COPY apache2.conf /etc/apache2/apache2.conf
+COPY config/apache2.conf /etc/apache2/apache2.conf
 
 RUN a2enmod rewrite
 
-COPY freetds/freetds.conf /etc/freetds/
-COPY freetds/locales.conf /etc/freetds/
+COPY config/freetds/freetds.conf /etc/freetds/
+COPY config/freetds/locales.conf /etc/freetds/
 
 Expose 80 443
 
