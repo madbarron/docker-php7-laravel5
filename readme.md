@@ -11,6 +11,8 @@ How to build
 How to run
 ----------
 
+You should have your website code in a subdirectory of your user dir, like ~/docker/my-site
+
 ```
 docker run -itP -v ~/<project path>:/var/www/laravel apache-php7-laravel5 /bin/bash
 apache2
@@ -25,7 +27,7 @@ To set up a new project directory
 ---------------------------------
 
 To install a new laravel instance onto your file system folder, mount a volume and then run:
-`composer.phar create-project laravel/laravel /var/www/laravel --prefer-dist`
+`composer create-project laravel/laravel /var/www/laravel --prefer-dist`
 
 To test database connection in container
 ----------------------------------------
