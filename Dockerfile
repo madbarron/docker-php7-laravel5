@@ -25,6 +25,9 @@ RUN apt-get update && apt-get install -y \
  && cd /usr/src/php \
  && make clean
 
+# install composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 COPY config/apache2.conf /etc/apache2/apache2.conf
 
 RUN a2enmod rewrite
