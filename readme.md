@@ -14,8 +14,7 @@ How to run
 You should have your website code in a subdirectory of your user dir, like ~/docker/my-site
 
 ```
-docker run -itP -v ~/<project path>:/var/www/laravel apache-php7-laravel5 /bin/bash
-apache2
+docker run -itP -v ~/<project path>:/var/www/laravel bquinn/apache-php7-laravel5
 ```
 
 Open Kitematic, find the mapped port
