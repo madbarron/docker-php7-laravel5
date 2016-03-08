@@ -32,4 +32,4 @@ To install a new laravel instance onto your file system folder, mount a volume a
 To test database connection in container
 ----------------------------------------
 
-# tsql -H <hostname> -U <username> -P <password> -D <database name>
+`tsql -H <hostname> -U <username> -P <password> -D <database name>`

@@ -35,6 +35,8 @@ RUN a2enmod rewrite
 COPY config/freetds/freetds.conf /etc/freetds/
 COPY config/freetds/locales.conf /etc/freetds/
 
+WORKDIR /var/www/laravel
+
 Expose 80 443
 
 CMD ["apache2", "-DFOREGROUND"]
