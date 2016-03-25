@@ -31,13 +31,12 @@ RUN apt-get update && apt-get install -y \
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Symlink our ldap libraries together
-RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/
-RUN docker-php-ext-install ldap
+# Get LDAP enabled
+RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
+	&& docker-php-ext-install ldap \
+	&& a2enmod rewrite ldap
 
 COPY config/apache2.conf /etc/apache2/apache2.conf
-
-RUN a2enmod rewrite ldap
 
 COPY config/freetds/freetds.conf /etc/freetds/
 COPY config/freetds/locales.conf /etc/freetds/
