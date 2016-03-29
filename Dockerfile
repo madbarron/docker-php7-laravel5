@@ -36,6 +36,11 @@ RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
 	&& docker-php-ext-install ldap \
 	&& a2enmod rewrite ldap
 
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+	&& apt-get install -y nodejs \
+	&& npm install -g bower gulp protractor jscs jshint
+
 COPY config/apache2.conf /etc/apache2/apache2.conf
 
 COPY config/freetds/freetds.conf /etc/freetds/
