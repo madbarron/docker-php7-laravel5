@@ -1,7 +1,33 @@
 Laravel 5 Environment
 =====================
 
-> Image to run Laravel 5 apps under Apache 2 and PHP 7.0
+> Image to run Laravel 5 apps under Apache 2 and PHP 7. Also include NPM and a few tools to help build our JS app.
+
+Included
+--------
+
+Works with LDAP
+Works with MSSQL via freetds and pdo_dblib
+
+PHP 7 with modules:
+- intl
+- mbstring
+- mcrypt
+- pcntl
+- pdo_dblib
+- pdo_mysql
+- pdo_pgsql
+- pgsql
+- zip
+- opcache
+- ldap
+
+nodejs with npm modules:
+- bower
+- gulp
+- protractor
+- jscs
+- jshint
 
 How to build
 ------------
@@ -20,9 +46,7 @@ docker run -itP -v ~/<project path>:/var/www/laravel bquinn/apache-php7-laravel5
 Open Kitematic, find the mapped port
 Open browser to your docker IP and the correct port, e.g. `http://192.168.99.100:32769/`
 
-To quit and shut down, `exit`
-
-To set up a new project directory
+To set up a new Laravel project directory
 ---------------------------------
 
 To install a new laravel instance onto your file system folder, mount a volume and then run:
