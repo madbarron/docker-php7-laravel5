@@ -50,4 +50,7 @@ WORKDIR /var/www/laravel
 
 Expose 80 443
 
+# Toss our composer includes into the PATH (for phpunit)
+ENV PATH /var/www/laravel/vendor/bin:$PATH
+
 CMD ["apache2", "-DFOREGROUND"]
