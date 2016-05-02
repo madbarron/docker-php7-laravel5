@@ -1,7 +1,7 @@
 Laravel 5 Environment
 =====================
 
-> Image to run Laravel 5 apps under Apache 2 and PHP 7. Also include NPM and a few tools to help build our JS app.
+> Image to run Laravel 5 apps under Apache 2 and PHP 5.6. Also include NPM and a few tools to help build our JS app.
 
 Included
 --------
@@ -9,7 +9,7 @@ Included
 Works with LDAP
 Works with MSSQL via freetds and pdo_dblib
 
-PHP 7 with modules:
+PHP 5.6 with modules:
 - intl
 - mbstring
 - mcrypt
