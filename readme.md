@@ -22,17 +22,19 @@ PHP 7 with modules:
 - opcache
 - ldap
 
-nodejs with npm modules:
+nodejs with global npm modules:
 - bower
 - gulp
 - protractor
 - jscs
 - jshint
+- typings
+- typescript
 
 How to build
 ------------
 
-`docker build -t apache-php7-laravel5 .`
+`docker build -t bquinn/apache-php7-laravel5 .`
 
 How to run
 ----------
