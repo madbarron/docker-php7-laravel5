@@ -34,7 +34,7 @@ nodejs with global npm modules:
 How to build
 ------------
 
-`docker build -t bquinn/apache-php7-laravel5 .`
+`docker build -t bquinn/laravel .`
 
 How to run
 ----------
@@ -42,7 +42,7 @@ How to run
 You should have your website code in a subdirectory of your user dir, like ~/docker/my-site
 
 ```
-docker run -itP -v ~/<project path>:/var/www/laravel bquinn/apache-php7-laravel5
+docker run -itP -v ~/<project path>:/var/www/laravel bquinn/laravel
 ```
 
 Open Kitematic, find the mapped port
