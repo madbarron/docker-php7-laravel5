@@ -25,6 +25,7 @@ RUN apt-get update && apt-get install -y \
 	pgsql \
 	zip \
 	opcache \
+	libnotify-bin \
  && cd /usr/src/php \
  && make clean
 
