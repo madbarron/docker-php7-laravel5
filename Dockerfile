@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 	libmcrypt-dev \
 	libldap2-dev \
 	git \
+	libnotify-bin \
 	&& rm -r /var/lib/apt/lists/* \
 	&& cp -s /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/ \
 	&& docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
@@ -25,7 +26,6 @@ RUN apt-get update && apt-get install -y \
 	pgsql \
 	zip \
 	opcache \
-	libnotify-bin \
  && cd /usr/src/php \
  && make clean
 
