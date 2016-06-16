@@ -10,11 +10,13 @@ RUN apt-get update && apt-get install -y \
 	libpq-dev \
 	libmcrypt-dev \
 	libldap2-dev \
+	libjpeg-dev \
 	libpng12-dev \
 	git \
 	libnotify-bin \
 	&& rm -r /var/lib/apt/lists/* \
 	&& cp -s /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/ \
+	&& docker-php-ext-configure gd --with-jpeg-dir=/usr/ \
 	&& docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
 	&& docker-php-ext-install \
 	gd \
