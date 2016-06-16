@@ -10,6 +10,7 @@ Works with LDAP
 Works with MSSQL via freetds and pdo_dblib
 
 PHP 5.6 with modules:
+- GD
 - intl
 - mbstring
 - mcrypt
