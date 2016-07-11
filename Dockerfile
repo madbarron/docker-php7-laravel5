@@ -50,6 +50,7 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
 	&& webdriver-manager update
 
 COPY config/apache2.conf /etc/apache2/apache2.conf
+COPY config/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 COPY config/freetds/freetds.conf /etc/freetds/
 COPY config/freetds/locales.conf /etc/freetds/
