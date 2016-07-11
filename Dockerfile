@@ -4,6 +4,7 @@ FROM php:5.6-apache
 # https://github.com/ganiutomo/docker-php-laravel/blob/master/5.6/apache/Dockerfile
 
 RUN apt-get update && apt-get install -y \
+	nano \
 	freetds-dev \
 	freetds-bin \
 	libicu-dev \
