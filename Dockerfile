@@ -62,4 +62,7 @@ Expose 80 443
 # Toss our composer includes into the PATH (for phpunit)
 ENV PATH /var/www/laravel/vendor/bin:$PATH
 
+# Add Apache log location to environment
+ENV APACHE_LOG_DIR /var/log/apache2
+
 CMD ["apache2", "-DFOREGROUND"]
