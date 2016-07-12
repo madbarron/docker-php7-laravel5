@@ -64,5 +64,6 @@ ENV PATH /var/www/laravel/vendor/bin:$PATH
 
 # Add Apache log location to environment
 ENV APACHE_LOG_DIR /var/log/apache2
+ENV TERM xterm
 
 CMD ["apache2", "-DFOREGROUND"]
