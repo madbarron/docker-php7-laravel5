@@ -40,7 +40,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Get LDAP enabled
 RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
 	&& docker-php-ext-install ldap \
-	&& a2enmod rewrite ldap
+	&& a2enmod rewrite ldap headers
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
