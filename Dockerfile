@@ -31,8 +31,8 @@ RUN apt-get update && apt-get install -y \
 	pgsql \
 	zip \
 	opcache \
- && cd /usr/src/php \
- && make clean
+	&& cd /usr/src/php \
+	&& make clean
 
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
