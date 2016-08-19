@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 	libpng12-dev \
 	git \
 	libnotify-bin \
+	supervisor \
 	&& rm -r /var/lib/apt/lists/* \
 	&& cp -s /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/ \
 	&& docker-php-ext-configure gd --with-jpeg-dir=/usr/ \
