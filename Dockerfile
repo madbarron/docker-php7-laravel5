@@ -41,9 +41,10 @@ RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
 	&& docker-php-ext-install ldap \
 	&& a2enmod rewrite ldap headers
 
-# Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
-	&& apt-get install -y nodejs \
+# Install nodejs-legacy and npm
+RUN apt-get update && apt-get install -y nodejs-legacy npm \
+	&& curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+	&& apt-get upgrade -y nodejs \
 	&& npm update -g npm \
 	&& npm install -g bower gulp protractor jscs jshint typescript typings \
 	&& webdriver-manager update
