@@ -46,8 +46,7 @@ RUN apt-get update && apt-get install -y nodejs-legacy npm \
 	&& curl -sL https://deb.nodesource.com/setup_4.x | bash - \
 	&& apt-get upgrade -y nodejs \
 	&& npm update -g npm \
-	&& npm install -g bower gulp protractor jscs jshint typescript typings \
-	&& webdriver-manager update
+	&& npm install -g bower gulp jscs jshint typescript typings
 
 COPY config/apache2.conf /etc/apache2/apache2.conf
 COPY config/000-default.conf /etc/apache2/sites-enabled/000-default.conf
