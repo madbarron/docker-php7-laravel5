@@ -48,6 +48,9 @@ RUN apt-get update && apt-get install -y nodejs-legacy npm \
 	&& npm update -g npm \
 	&& npm install -g bower gulp jscs jshint typescript typings
 
+# Install PHP xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
 COPY config/apache2.conf /etc/apache2/apache2.conf
 COPY config/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
