@@ -43,10 +43,11 @@ RUN ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
 
 # Install nodejs-legacy and npm
 RUN apt-get update && apt-get install -y nodejs-legacy npm \
-	&& curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+	&& curl -sL https://deb.nodesource.com/setup_6.x | bash - \
 	&& apt-get upgrade -y nodejs \
 	&& npm update -g npm \
-	&& npm install -g bower gulp jscs jshint typescript typings
+	&& npm install -g bower gulp jscs jshint typescript typings \
+	&& npm rebuild node-sass --no-bin-links
 
 # Install PHP xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
